@@ -13,7 +13,7 @@ fetch('data_1.json')
           <td>${film.title}</td>
           <td>${film.release_year}</td>
           <td>${film.director}</td>
-          <td>${film.box_office.toLocaleString()}</td>
+          <td>$${film.box_office.toLocaleString()}</td>
           <td>${film.country}</td>
         `;
         tableBody.appendChild(row);
@@ -26,6 +26,12 @@ fetch('data_1.json')
     // Sort by box office
     document.getElementById("sort-by-box-office").addEventListener("click", () => {
       const sortedData = [...data].sort((a, b) => b.box_office - a.box_office);
+      populateTable(sortedData);
+    });
+
+    // Sort by year
+    document.getElementById("sort-by-year").addEventListener("click", () => {
+      const sortedData = [...data].sort((a, b) => b.release_year - a.release_year);
       populateTable(sortedData);
     });
 

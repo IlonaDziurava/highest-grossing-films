@@ -5,26 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Highest-Grossing Films</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Highest-Grossing Films</h1>
-  <div id="filters">
-    <input type="text" id="search" placeholder="Search by title...">
-    <button id="sort-by-box-office">Sort by Box Office</button>
+  <div class="container">
+    <h1>Highest-Grossing Films</h1>
+    <div id="filters">
+      <input type="text" id="search" placeholder="Search by title...">
+      <button id="sort-by-box-office">Sort by Box Office</button>
+      <button id="sort-by-year">Sort by Year</button>
+    </div>
+    <table id="films-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Release Year</th>
+          <th>Director</th>
+          <th>Box Office</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be populated by JavaScript -->
+      </tbody>
+    </table>
   </div>
-  <table id="films-table">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Release Year</th>
-        <th>Director</th>
-        <th>Box Office</th>
-        <th>Country</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
   <script src="script.js"></script>
 </body>
 </html>
